@@ -24,7 +24,7 @@
       <section class="card">
         <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_bridge" src="./images/Карлов мост в Праге - 1280x854.jpg" alt="Карлов мост в Праге" />
+          <img loading="lazy" class="card__image card__image_grayscale" src="./images/Карлов мост в Праге - 1280x854.jpg" alt="Карлов мост в Праге" />
           <p class="card__label">Старт</p>
         </div>
         <div class="card__info">
@@ -54,7 +54,7 @@
       <section class="card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_beach" src="./images/Пляж и море - 1280x854.jpg" alt="Пляж и море" />
+          <img loading="lazy" class="card__image card__image_brightness" src="./images/beach.jpg" alt="Пляж и море" />
           <p class="card__label">Пусто</p>
         </div>
         <div class="card__info">
@@ -84,7 +84,7 @@
       <section class="card">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_fields" src="./images/Рисовые поля - 1280x854.jpg" alt="Рисовые поля" />
+          <img loading="lazy" class="card__image card__image_saturate" src="./images/pole.jpg" alt="Рисовые поля" />
           <p class="card__label">Сомнение</p>
         </div>
         <div class="card__info">
@@ -114,7 +114,7 @@
       <section class="card">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_lake" src="./images/Озеро в горах - 1280x854.jpg" alt="Озеро в горах" />
+          <img loading="lazy" class="card__image card__image_contrast-brightness" src="./images/lake.jpg" alt="Озеро в горах" />
           <p class="card__label">Идеал</p>
         </div>
         <div class="card__info">
@@ -144,7 +144,7 @@
        <section class="card">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_peaks" src="./images/Вершины гор над облаками - 1280x854.jpg" alt="Вершины гор над облаками" />
+          <img loading="lazy" class="card__image card__image_hue-rotate" src="./images/mountains.jpg" alt="Вершины гор над облаками" />
           <p class="card__label">Рядом</p>
         </div>
         <div class="card__info">
@@ -174,7 +174,7 @@
       <section class="card">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_path" src="./images/Тропа среди полей - 1280x720.jpg" alt="Тропа среди полей" />
+          <img loading="lazy" class="card__image card__image_sepia" src="./images/tropa.jpg" alt="Тропа среди полей" />
           <p class="card__label">Обход</p>
         </div>
         <div class="card__info">
@@ -204,7 +204,7 @@
       <section class="card">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_sunset" src="./images/Закат - 1280x872.jpg" alt="Закат" />
+          <img loading="lazy" class="card__image card__image_sepia-contrast" src="./images/sunset.jpg" alt="Закат" />
           <p class="card__label">Усталость</p>
         </div>
         <div class="card__info">
@@ -234,7 +234,7 @@
       <section class="card">
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__image-container">
-          <img loading="lazy" class="card__image card__image_lightning" src="./images/Молния - 1280x854.jpg" alt="Молния" />
+          <img loading="lazy" class="card__image card__image_contrast" src="./images/lightning.jpg" alt="Молния" />
           <p class="card__label">Здесь</p>
         </div>
         <div class="card__info">
@@ -261,26 +261,24 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <button class="button" type="button" onclick="window['save-dialog'].showModal();" aria-controls="save-dialog">
-        <svg class="disketa__svg" width="32" height="32" aria-hidden="true">
-          <use href="./svg/sprite.svg#disketa">
+      <button class="button save-button" type="button" onclick="window['save-dialog'].showModal();" aria-controls="save-dialog">
+        <svg class="disketa" width="21" height="21" aria-hidden="true">
+          <use href="./svg/sprite.svg#disketa"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog id="save-dialog">
+      <dialog class="dialog" id="save-dialog">
         <div class="dialog-info">
-          <svg class="disketa__svg" width="32" height="32" aria-hidden="true">
-            <use href="./svg/sprite.svg#disketa">
+          <svg class="disketa" width="39" height="39" aria-hidden="true">
+            <use href="./svg/sprite.svg#disketa"></use>
           </svg>
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>
         <button class="button dialog__button" type="button" commandfor="save-dialog" command="close">
-          <span class="button__text">ок</span>
+          <span class="button__text">ОК</span>
         </button>
       </dialog>
-    </footer>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

@@ -1,8 +1,7 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --font-header: "PressStart2P-Regular", sans-serif;
+    --font-header: "PressStart2P", sans-serif;
     --font-main: "Inter-Variable", sans-serif;
-    --font-popover-and-like: "PressStart2P-Regular", sans-serif; 
+    --font-popover-and-like: "PressStart2P", sans-serif; 
     --font-weight-text: 400;
     --font-weight-title: 700;
     --contour-color: #000;
@@ -11,11 +10,11 @@
     --button-text: #fff;
     --text-stroke: #000;
     --font-color: #000000;
-    --font-size-header-title: clamp(2.7rem, 2.5vw + 1rem, 3.6rem);
-    --font-size-header-subtitle: clamp(0.8rem, 1vw + 0.5rem, 1.3rem);
+    --font-size-header-title: 64px;
+    --font-size-header-subtitle: 24px;
     --font-size-main: 1rem;
-    --card-inline-size: clamp(16rem, 100%, 43.75rem);
-    --header-block-size: clamp(323px, 100%, 364px);
+    --card-inline-size: min(100%, 700px);
+    --header-block-size: 372px;
     --dialog-inline-size: clamp(341px, 90%, 353px);
     --dialog-block-size: 191px;
     --footer-inline-size: clamp(306px,80%,335px);
@@ -24,4 +23,10 @@
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+}
+
+@media (width <= 375px) {
+  :root {
+    --footer-block-size: 84px;
+  }
 }
