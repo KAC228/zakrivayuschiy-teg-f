@@ -77,16 +77,19 @@ html {
   inline-size: var(--card-inline-size);
   block-size: var(--header-block-size);
   border: 2px solid #000;
+  container-type: inline-size;
 }
 
 .header__title {
-  font-size: var(--font-size-header-title);
+  font-size: min(var(--font-size-header-title), calc((100cqi - 16px) / 7));
   line-height: 1;
+  max-inline-size: 100%;
 }
 
 .header__subtitle {
-  font-size: var(--font-size-header-subtitle);
+  font-size: min(var(--font-size-header-subtitle), calc((100cqi - 16px) / 15));
   line-height: 1;
+  max-inline-size: 100%;
 }
 
 .main {
@@ -230,8 +233,8 @@ html {
 .save-button {
   inline-size: var(--footer-inline-size);
   block-size: var(--footer-block-size);
-  padding: 17px 20px;
-  font-size: 13px;
+  padding: 16px 14px;
+  font-size: 14px;
   white-space: nowrap;
 }
 
@@ -250,10 +253,12 @@ dialog[open] {
   line-height: 1.5;
   text-transform: uppercase;
   border: 2px solid #000;
-  padding: 30px 40px;
+  padding: 26px 28px 18px;
   margin: auto;
+  overflow: hidden;
   inline-size: var(--dialog-inline-size);
   block-size: var(--dialog-block-size);
+  height: fit-content;
 }
 
 .dialog-info {
@@ -272,15 +277,9 @@ dialog::backdrop {
 }
 
 @media (width <= 376px) {
-  :root {
-    --font-size-header-title: 48px;
-    --font-size-header-subtitle: 16px;
-    --header-block-size: 327px;
-    --footer-block-size: 84px;
-  }
-
   .save-button {
     flex-direction: column;
+    padding: 14px 10px;
   }
 
   .save-button .disketa {
@@ -296,7 +295,7 @@ dialog::backdrop {
     max-inline-size: 320px;
     block-size: fit-content;
     height: fit-content;
-    padding: 24px 16px;
+    padding: 16px 8px 8px;
     margin: auto;
   }
 }
