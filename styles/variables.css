@@ -16,7 +16,9 @@
     --card-inline-size: min(100%, 700px);
     --header-block-size: 372px;
     --dialog-inline-size: 353px;
-    --dialog-block-size: fit-content;
+    --dialog-block-size: 191px;
+    --dialog-padding-block: 30px;
+    --dialog-padding-inline: 30px;
     --footer-inline-size: 335px;
     --footer-block-size: 55px;
     --background: 
@@ -32,5 +34,7 @@
     --header-block-size: 327px;
     --footer-block-size: 84px;
     --footer-inline-size: 305px;
+    --dialog-inline-size: calc(100% - 34px);
+    --dialog-padding-inline: 40px;
   }
 }

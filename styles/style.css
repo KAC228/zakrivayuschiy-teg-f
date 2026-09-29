@@ -249,16 +249,20 @@ dialog[open] {
   column-gap: 20px;
   row-gap: 26px;
   font-family: var(--font-header);
-  font-size: 0.8rem;
+  font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
   border: 2px solid #000;
-  padding: 26px 28px 18px;
+  padding: var(--dialog-padding-block) var(--dialog-padding-inline);
   margin: auto;
   overflow: hidden;
   inline-size: var(--dialog-inline-size);
   block-size: var(--dialog-block-size);
-  height: fit-content;
+  height: var(--dialog-block-size);
+  max-inline-size: none;
+  max-block-size: none;
+  max-width: none;
+  max-height: none;
 }
 
 .dialog-info {
@@ -291,11 +295,7 @@ dialog::backdrop {
   }
 
   dialog[open] {
-    inline-size: calc(100vw - 48px);
-    max-inline-size: 320px;
-    block-size: fit-content;
-    height: fit-content;
-    padding: 16px 8px 8px;
-    margin: auto;
+    margin-top: 236px;
+    margin-bottom: auto;
   }
 }
